@@ -9,6 +9,8 @@
     <Folder Include="Contexts\" />
     <Folder Include="EntityConfiguration\" />
     <Folder Include="Repositories\" />
+    <Folder Include="Repositories\BaseRepositories\" />
+    <Folder Include="Repositories\SurveyRepositories\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.1" />
