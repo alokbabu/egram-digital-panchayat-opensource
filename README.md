@@ -5,5 +5,29 @@ E-Gram is a cloud based platform built exclusively for Grama Panchayats in Keral
 # Who can contribute.
 Anyone who is interested in contributing towards this project can email me @ alokbabu@nextuz.com
 
+# Configuring Database
+Add appsettings.Development.config to EGram.Data.SQL.Ef project.
+Add your connectionstring.
+
+# EF Migrations
+
+Navigate to EGram.Data.SQL.Ef. In Terminal type
+
+```Terminal
+dotnet ef database update
+```
+
+To Recreate migration
+
+```Terminal
+dotnet ef add InitalCreate
+```
+
+Remove Migration
+
+```Terminal
+dotnet ef remove
+```
+
 [Website](http://nextuz.com/)
 [E-Gram](http://nextuz.com/products/egram)
