@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EGram.Data.EF.Repositories;
+using EGram.Data.EF.Repositories.SurveyRepositories;
+using EGram.Data.SQL.Ef.Configuration;
 using EGram.Data.SQL.Ef.Repositories;
+using EGram.Data.SQL.Ef.Repositories.EducationRepositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -35,7 +38,9 @@ namespace EGram.Web.MVC
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddDatabaseConfiguration();
+            services.AddRepositoryConfiguration();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

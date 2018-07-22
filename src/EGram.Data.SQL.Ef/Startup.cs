@@ -35,6 +35,8 @@ namespace EGram.Data.SQL.Ef
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDatabaseConfiguration();
+            services.AddRepositoryConfiguration();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +51,16 @@ namespace EGram.Data.SQL.Ef
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+
+            //Get configuration based on Environment
+            //Set Environment as Development in development machine to read appsettings.Development.json
+            //Environment should set as Production in production machines.
+            //Read: https://bit.ly/2tqfVfC
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddEnvironmentVariables();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

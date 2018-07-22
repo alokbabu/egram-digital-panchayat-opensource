@@ -5,13 +5,21 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EGram.Web.MVC.Models;
+using EGram.Data.SQL.Ef.Repositories;
 
 namespace EGram.Web.MVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IUnitOfWork _uof;
+        public HomeController(IUnitOfWork uof)
+        {
+            _uof = uof;
+        }
+
         public IActionResult Index()
         {
+            //var education = _uof.Educations.GetAll();
             return View();
         }
 

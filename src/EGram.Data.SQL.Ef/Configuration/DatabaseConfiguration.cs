@@ -21,7 +21,7 @@ namespace EGram.Data.SQL.Ef.Configuration
 
             Configuration = builderConfig.Build();
 
-            services.AddDbContext<Context>(options =>
+            services.AddDbContext<EGramContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString($"EGramContext.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}"),
             //Implementing resilient Entity Framework Core SQL connections
             //Read more https://bit.ly/2KBzXia

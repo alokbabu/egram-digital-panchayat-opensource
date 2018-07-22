@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EGram.Data.SQL.Ef.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(EGramContext))]
     [Migration("20180722164308_InitialCreate")]
     partial class InitialCreate
     {

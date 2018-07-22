@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EGram.Data.SQL.Ef.Contexts
 {
-    public class Context: DbContext
+    public class EGramContext: DbContext
     {
-        public Context(DbContextOptions<Context> options)
+        public EGramContext(DbContextOptions<EGramContext> options)
             :base(options)
         {
         }

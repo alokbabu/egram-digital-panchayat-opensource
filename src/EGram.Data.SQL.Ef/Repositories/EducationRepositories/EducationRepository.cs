@@ -3,12 +3,12 @@ using EGram.Data.SQL.Ef.Contexts;
 using EGram.Data.SQL.Ef.Models;
 using EGram.Data.SQL.Ef.Repositories.BaseRepositories;
 
-namespace EGram.Data.EF.Repositories.SurveyRepositories
+namespace EGram.Data.SQL.Ef.Repositories.EducationRepositories
 {
-    public class SurveyRepository: BaseRepository<Survey>, ISurveyRepository, IDisposable
+    public class EducationRepository: BaseRepository<Education>, IEducationRepository, IDisposable
     {
-        public SurveyRepository(EGramContext context)
-            :base(context)
+        public EducationRepository(EGramContext context)
+            : base(context)
         {
         }
 
@@ -37,7 +37,6 @@ namespace EGram.Data.EF.Repositories.SurveyRepositories
         {
             Dispose(true);
             GC.SuppressFinalize(this);
-        }
-
+        }        
     }
 }
