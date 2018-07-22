@@ -18,12 +18,13 @@ namespace EGram.Data.SQL.Ef.Contexts
             modelBuilder.ApplyConfiguration(new SurveyEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new BloodGroupEntityTypeConfiguration());
 
-            modelBuilder.Seed(BloodGroupSeed.Get().ToArray());
+            modelBuilder.Seed(BloodGroupSeed.Get());
+            modelBuilder.Seed(EducationSeed.Get());
             
         }
 
         //public DbSet<House> Houses { get; set; }
-        //public DbSet<Education> Educations { get; set; }
+        public DbSet<Education> Educations { get; set; }
         public DbSet<BloodGroup> BloodGroups { get; set; }
         public DbSet<Survey> Surveys { get; set; }
 

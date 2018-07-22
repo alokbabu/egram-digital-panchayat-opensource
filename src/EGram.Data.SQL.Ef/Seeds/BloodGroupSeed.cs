@@ -6,9 +6,9 @@ namespace EGram.Data.SQL.Ef.Seeds
 {
     public static class BloodGroupSeed
     {
-        public static List<BloodGroup> Get()
+        public static BloodGroup[] Get()
         {
-            return new List<BloodGroup>
+            return new BloodGroup[]
             {
                 new BloodGroup { BloodGroupId = 1, Group = "A +"},
                 new BloodGroup { BloodGroupId = 2, Group = "A -"},
