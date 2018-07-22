@@ -8,7 +8,9 @@ namespace EGram.Data.EF.Repositories.BaseRepositories
     {
         TEntity Get(int id);
         IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> GetAll(int? page);
         IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate);
+
 
         void Add(TEntity entity);
         void AddRange(IEnumerable<TEntity> entities);

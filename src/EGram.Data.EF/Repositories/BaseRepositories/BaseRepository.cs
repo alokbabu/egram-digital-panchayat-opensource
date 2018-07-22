@@ -25,6 +25,13 @@ namespace EGram.Data.EF.Repositories.BaseRepositories
             return Context.Set<TEntity>().ToList();
         }
 
+        public IEnumerable<TEntity> GetAll(int? page)
+        {
+            const int pageSize = 10;
+            return Context.Set<TEntity>().Skip((page ?? 0) * pageSize)
+                          .Take(pageSize).ToList();
+        }
+
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
             return Context.Set<TEntity>().Where(predicate);

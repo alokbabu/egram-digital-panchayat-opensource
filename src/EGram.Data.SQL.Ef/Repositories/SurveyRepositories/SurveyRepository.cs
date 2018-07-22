@@ -1,7 +1,7 @@
 ﻿using System;
-using EGram.Data.EF.Contexts;
-using EGram.Data.EF.Models;
-using EGram.Data.EF.Repositories.BaseRepositories;
+using EGram.Data.SQL.Ef.Contexts;
+using EGram.Data.SQL.Ef.Models;
+using EGram.Data.SQL.Ef.Repositories.BaseRepositories;
 
 namespace EGram.Data.EF.Repositories.SurveyRepositories
 {

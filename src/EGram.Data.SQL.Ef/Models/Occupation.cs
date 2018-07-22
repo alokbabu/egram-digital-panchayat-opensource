@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace EGram.Data.EF.Models
+namespace EGram.Data.SQL.Ef.Models
 {
     public class Occupation
     {

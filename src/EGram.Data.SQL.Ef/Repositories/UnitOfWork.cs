@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using EGram.Data.EF.Contexts;
+using EGram.Data.SQL.Ef.Contexts;
 using EGram.Data.EF.Repositories.SurveyRepositories;
 
-namespace EGram.Data.EF.Repositories
+namespace EGram.Data.SQL.Ef.Repositories
 {
     public class UnitOfWork: IUnitOfWork
     {

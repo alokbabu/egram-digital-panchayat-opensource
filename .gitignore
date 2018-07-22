@@ -39,3 +39,6 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+
+#Config
+src/EGram.Data.SQL.Ef/appsettings.Development.json

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using EGram.Data.EF.Repositories.SurveyRepositories;
 
-namespace EGram.Data.EF.Repositories
+namespace EGram.Data.SQL.Ef.Repositories
 {
     public interface IUnitOfWork: IDisposable
     {

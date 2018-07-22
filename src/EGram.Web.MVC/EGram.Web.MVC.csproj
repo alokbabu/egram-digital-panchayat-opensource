@@ -9,9 +9,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EGram.Data.EF\EGram.Data.EF.csproj" />
+    <Folder Include="Controllers\Administrators\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\Administrators\" />
+    <Content Remove="appsettings.Production.json" />
+    <Content Remove="Views\Home\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appsettings.Production.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EGram.Data.SQL.Ef\EGram.Data.SQL.Ef.csproj" />
   </ItemGroup>
 </Project>

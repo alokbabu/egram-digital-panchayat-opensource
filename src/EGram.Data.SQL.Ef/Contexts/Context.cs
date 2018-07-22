@@ -1,9 +1,10 @@
-﻿using System;
-using EGram.Data.EF.EntityConfiguration;
-using EGram.Data.EF.Models;
+﻿using EGram.Data.SQL.Ef.EntityConfiguration;
+using EGram.Data.SQL.Ef.Extensions;
+using EGram.Data.SQL.Ef.Models;
+using EGram.Data.SQL.Ef.Seeds;
 using Microsoft.EntityFrameworkCore;
 
-namespace EGram.Data.EF.Contexts
+namespace EGram.Data.SQL.Ef.Contexts
 {
     public class Context: DbContext
     {
@@ -15,9 +16,17 @@ namespace EGram.Data.EF.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new SurveyEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new BloodGroupEntityTypeConfiguration());
+
+            modelBuilder.Seed(BloodGroupSeed.Get().ToArray());
+            
         }
 
-        public DbSet<Survey> Surveys { get; set;}
+        //public DbSet<House> Houses { get; set; }
+        //public DbSet<Education> Educations { get; set; }
+        public DbSet<BloodGroup> BloodGroups { get; set; }
+        public DbSet<Survey> Surveys { get; set; }
+
 
     }
 }

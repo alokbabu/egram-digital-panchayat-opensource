@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace EGram.Data.EF.Repositories.BaseRepositories
+namespace EGram.Data.SQL.Ef.Repositories.BaseRepositories
 {
     public interface IBaseRepository<TEntity> where TEntity: class
     {

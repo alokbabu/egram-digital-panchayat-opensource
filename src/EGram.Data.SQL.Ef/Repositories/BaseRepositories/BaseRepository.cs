@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 
-namespace EGram.Data.EF.Repositories.BaseRepositories
+namespace EGram.Data.SQL.Ef.Repositories.BaseRepositories
 {
     public class BaseRepository<TEntity>: IBaseRepository<TEntity> where TEntity: class
     {
