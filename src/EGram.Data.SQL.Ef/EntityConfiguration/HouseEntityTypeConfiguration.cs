@@ -28,9 +28,19 @@ namespace EGram.Data.SQL.Ef.EntityConfiguration
                 .IsRequired();
 
             builder
+              .Property(p => p.City)
+              .HasColumnType("varchar(100)")
+              .IsRequired();
+
+            builder
                 .Property(p => p.PostOffice)
                 .HasColumnType("varchar(200)")
                 .IsRequired();
+
+            builder
+                .Property(p => p.PostCode)
+              .HasColumnType("varchar(10)")
+              .IsRequired();
 
             builder
                 .Property(p => p.Latitude)

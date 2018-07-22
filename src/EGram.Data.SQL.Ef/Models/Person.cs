@@ -18,8 +18,11 @@ namespace EGram.Data.SQL.Ef.Models
         public bool RecieveNotification { get; set; }
         public int BloodGroupId { get; set; }
 
+
         public Education Education { get; set; }
+        public Occupation Occupation { get; set; }
         public BloodGroup BloodGroup { get; set; }
+
         
     }
 }

@@ -8,5 +8,7 @@ namespace EGram.Data.SQL.Ef.Models
         [Key]
         public int EducationId { get; set; }
         public string EducationLevel { get; set; }
+
+        public Person Person { get; set; }
     }
 }

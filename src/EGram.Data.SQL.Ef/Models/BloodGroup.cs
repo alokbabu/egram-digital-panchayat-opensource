@@ -7,5 +7,7 @@ namespace EGram.Data.SQL.Ef.Models
     {
         public int BloodGroupId { get; set; }
         public string Group { get; set; }
+
+        public Person Person { get; set; }
     }
 }

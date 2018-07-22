@@ -10,7 +10,9 @@ namespace EGram.Data.SQL.Ef.Models
         public string HouseNumber { get; set; }
         public string AddressLine { get; set; }
         public string StreetAddress { get; set; }
+        public string City { get; set; }
         public string PostOffice { get; set; } //TODO: normalize?
+        public string PostCode { get; set; }
         public Decimal? Latitude { get; set; }
         public Decimal? Longitude { get; set; }
     }
