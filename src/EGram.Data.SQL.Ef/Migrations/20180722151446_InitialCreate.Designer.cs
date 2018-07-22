@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EGram.Data.SQL.Ef.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20180722132329_InitialCreate")]
+    [Migration("20180722151446_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,7 +27,8 @@ namespace EGram.Data.SQL.Ef.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Group");
+                    b.Property<string>("Group")
+                        .HasColumnType("varchar(200)");
 
                     b.HasKey("BloodGroupId");
 
@@ -42,6 +43,28 @@ namespace EGram.Data.SQL.Ef.Migrations
                         new { BloodGroupId = 6, Group = "O -" },
                         new { BloodGroupId = 7, Group = "AB +" },
                         new { BloodGroupId = 8, Group = "AB -" }
+                    );
+                });
+
+            modelBuilder.Entity("EGram.Data.SQL.Ef.Models.Education", b =>
+                {
+                    b.Property<int>("EducationId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EducationLevel");
+
+                    b.HasKey("EducationId");
+
+                    b.ToTable("Educations");
+
+                    b.HasData(
+                        new { EducationId = 1, EducationLevel = "Basic School" },
+                        new { EducationId = 2, EducationLevel = "High School" },
+                        new { EducationId = 3, EducationLevel = "Predegree/Diploma" },
+                        new { EducationId = 4, EducationLevel = "Graduate" },
+                        new { EducationId = 5, EducationLevel = "Post Graduate" },
+                        new { EducationId = 6, EducationLevel = "Doctorate or Higher" }
                     );
                 });
 

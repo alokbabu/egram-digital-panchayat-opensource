@@ -14,11 +14,24 @@ namespace EGram.Data.SQL.Ef.Migrations
                 {
                     BloodGroupId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Group = table.Column<string>(nullable: true)
+                    Group = table.Column<string>(type: "varchar(200)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BloodGroups", x => x.BloodGroupId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Educations",
+                columns: table => new
+                {
+                    EducationId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    EducationLevel = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Educations", x => x.EducationId);
                 });
 
             migrationBuilder.CreateTable(
@@ -73,6 +86,19 @@ namespace EGram.Data.SQL.Ef.Migrations
                     { 8, "AB -" }
                 });
 
+            migrationBuilder.InsertData(
+                table: "Educations",
+                columns: new[] { "EducationId", "EducationLevel" },
+                values: new object[,]
+                {
+                    { 1, "Basic School" },
+                    { 2, "High School" },
+                    { 3, "Predegree/Diploma" },
+                    { 4, "Graduate" },
+                    { 5, "Post Graduate" },
+                    { 6, "Doctorate or Higher" }
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Surveys_SurveyTypeId",
                 table: "Surveys",
@@ -89,6 +115,9 @@ namespace EGram.Data.SQL.Ef.Migrations
         {
             migrationBuilder.DropTable(
                 name: "BloodGroups");
+
+            migrationBuilder.DropTable(
+                name: "Educations");
 
             migrationBuilder.DropTable(
                 name: "Surveys");
