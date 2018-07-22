@@ -17,7 +17,7 @@ Navigate to EGram.Data.SQL.Ef. In Terminal type
 dotnet ef database update
 ```
 
-To Recreate migration
+Add Ef migration
 
 ```Terminal
 dotnet ef add InitalCreate
