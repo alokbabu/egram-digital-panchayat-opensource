@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.1.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,6 +19,9 @@
     <Folder Include="Seeds\" />
     <Folder Include="Extensions\" />
     <Folder Include="Repositories\EducationRepositories\" />
+    <Folder Include="Identity\" />
+    <Folder Include="Identity\Models\" />
+    <Folder Include="Identity\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\Home\Contact.cshtml" />

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using EGram.Data.SQL.Ef.Configuration;
+using EGram.Data.SQL.Ef.Contexts;
+using EGram.Data.SQL.Ef.Identity.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -37,6 +40,12 @@ namespace EGram.Data.SQL.Ef
             services.AddDatabaseConfiguration();
             services.AddRepositoryConfiguration();
 
+            //ASP.NET Core identity
+            services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
+                        .AddEntityFrameworkStores<EGramContext>()
+                        .AddDefaultTokenProviders();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,9 +71,11 @@ namespace EGram.Data.SQL.Ef
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
 
+            app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
 
             app.UseMvc(routes =>
             {

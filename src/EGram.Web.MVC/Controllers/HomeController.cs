@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using EGram.Web.MVC.Models;
 using EGram.Data.SQL.Ef.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EGram.Web.MVC.Controllers
 {
@@ -17,6 +18,7 @@ namespace EGram.Web.MVC.Controllers
             _uof = uof;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             //var education = _uof.Educations.GetAll();
