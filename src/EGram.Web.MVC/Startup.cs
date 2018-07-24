@@ -47,6 +47,7 @@ namespace EGram.Web.MVC
             //ASP.NET Core identity
             services.AddIdentity<ApplicationUser, IdentityRole<Guid>>()
                         .AddEntityFrameworkStores<EGramContext>()
+                        .AddDefaultUI()
                         .AddDefaultTokenProviders();
 
         }

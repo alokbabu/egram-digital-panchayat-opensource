@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Mvc.ViewEngines
+@inject IHostingEnvironment Environment
+@inject ICompositeViewEngine Engine
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - @Environment.ApplicationName</title>
+    <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Identity/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="/Identity/Account/Register">Register</a></li>
+            <li><a href="/Identity/Account/Login">Login</a></li>
+        </ul>
+        @RenderBody()
+    </div>
+    <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
+    <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/Identity/js/site.js" asp-append-version="true"></script>
+    @RenderSection("scripts", required: false);
+</body>
+</html>

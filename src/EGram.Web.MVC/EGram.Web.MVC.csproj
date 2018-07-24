@@ -7,12 +7,17 @@
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="2.1.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\Administrators\" />
     <Folder Include="Views\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Areas\" />
+    <Folder Include="Areas\Identity\" />
+    <Folder Include="Areas\Identity\Pages\" />
+    <Folder Include="Pages\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="appsettings.Production.json" />
