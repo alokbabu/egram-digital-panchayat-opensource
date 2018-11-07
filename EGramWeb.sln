@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGram.Web.MVC", "src\EGram.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGram.Data.SQL.Ef", "src\EGram.Data.SQL.Ef\EGram.Data.SQL.Ef.csproj", "{18024B11-197A-4379-AA03-A85B51AD818D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EGram.Identity", "src\EGram.Identity\EGram.Identity.csproj", "{E4EDF3FA-AED1-4F63-83A6-6B34412DE471}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +25,15 @@ Global
 		{18024B11-197A-4379-AA03-A85B51AD818D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18024B11-197A-4379-AA03-A85B51AD818D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18024B11-197A-4379-AA03-A85B51AD818D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4EDF3FA-AED1-4F63-83A6-6B34412DE471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4EDF3FA-AED1-4F63-83A6-6B34412DE471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4EDF3FA-AED1-4F63-83A6-6B34412DE471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4EDF3FA-AED1-4F63-83A6-6B34412DE471}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4B9CA2CF-15FC-4478-8569-754BDCC0C045} = {AF3CF27A-00DE-46E8-A5E1-319EE5980254}
 		{18024B11-197A-4379-AA03-A85B51AD818D} = {AF3CF27A-00DE-46E8-A5E1-319EE5980254}
+		{E4EDF3FA-AED1-4F63-83A6-6B34412DE471} = {AF3CF27A-00DE-46E8-A5E1-319EE5980254}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
