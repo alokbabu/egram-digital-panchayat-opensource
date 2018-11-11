@@ -1,16 +1,16 @@
 ﻿using System;
-using EGram.Data.SQL.Ef.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using EGram.Data.SQL.Ef.Models;
 
 namespace EGram.Data.SQL.Ef.EntityConfiguration
 {
-    public class SurveyEntityTypeConfiguration : IEntityTypeConfiguration<Survey>
+    public class YearEntityTypeConfiguration: IEntityTypeConfiguration<Year>
     {
-        public void Configure(EntityTypeBuilder<Survey> builder)
+        public void Configure(EntityTypeBuilder<Year> builder)
         {
             builder
-                .HasIndex(s => s.SurveyId)
+            .HasIndex(s => s.YearId)
             .IsUnique();
         }
     }

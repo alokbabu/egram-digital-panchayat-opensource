@@ -4,14 +4,16 @@ using EGram.Data.SQL.Ef.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EGram.Data.SQL.Ef.Migrations
 {
     [DbContext(typeof(EGramContext))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20181111210604_AddSurveyType")]
+    partial class AddSurveyType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -21,7 +21,8 @@ namespace EGram.Web.MVC.Controllers.Administrators
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            var surveys = _uof.Surveys.GetAll();
+            return View(surveys);
         }
     }
 }

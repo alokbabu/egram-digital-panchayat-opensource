@@ -21,7 +21,7 @@ namespace EGram.Web.MVC.Controllers
         [Authorize]
         public IActionResult Index()
         {
-            //var education = _uof.Educations.GetAll();
+            var education = _uof.Educations.GetAll();
             return View();
         }
 

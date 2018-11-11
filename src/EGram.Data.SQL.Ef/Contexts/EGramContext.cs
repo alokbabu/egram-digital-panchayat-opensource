@@ -26,11 +26,17 @@ namespace EGram.Data.SQL.Ef.Contexts
             builder.ApplyConfiguration(new BloodGroupEntityTypeConfiguration());
             builder.ApplyConfiguration(new HouseEntityTypeConfiguration());
             builder.ApplyConfiguration(new OccupationEntityTypeConfiguration());
+            builder.ApplyConfiguration(new YearEntityTypeConfiguration());
+            builder.ApplyConfiguration(new SurveyTypeEntityTypeConfiguration());
+            builder.ApplyConfiguration(new SurveyEntityTypeConfiguration());
 
             builder.Seed(BloodGroupSeed.Get());
             builder.Seed(EducationSeed.Get());
             builder.Seed(HouseSeed.Get());
             builder.Seed(OccupationSeed.Get());
+            builder.Seed(YearSeed.Get());
+            builder.Seed(SurveyTypeSeed.Get());
+            builder.Seed(SurveySeed.Get());
             
         }
 
@@ -39,7 +45,8 @@ namespace EGram.Data.SQL.Ef.Contexts
         public DbSet<Occupation> Occupations { get; set; }
         public DbSet<BloodGroup> BloodGroups { get; set; }
         public DbSet<Survey> Surveys { get; set; }
-
+        public DbSet<SurveyType> SurveyTypes { get; set; }
+        public DbSet<Year> Years { get; set; }
 
     }
 }
